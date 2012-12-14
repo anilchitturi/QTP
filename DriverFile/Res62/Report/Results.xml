@@ -1,0 +1,354 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE Report
+[
+<!ELEMENT Report (General ,(Doc|BPT)) >
+<!ATTLIST Report ver CDATA #REQUIRED tmZone CDATA #REQUIRED>
+
+<!ELEMENT General ( DocLocation ) >
+<!ATTLIST General productName CDATA #REQUIRED productVer CDATA #REQUIRED os CDATA #REQUIRED host CDATA #REQUIRED>
+
+<!ELEMENT BPT (DName,Res,DVer?,TSet?,TInst?,NodeArgs,Doc*) >
+<!ATTLIST BPT rID ID #REQUIRED >
+
+<!ELEMENT Doc (DName,Res,DVer?,TSet?,TInst?,RunType?,DT?,Step*,DIter*,Action*,Summary?,NodeArgs?) >
+<!ATTLIST Doc rID ID #REQUIRED type (Test|BC) "Test" productName CDATA #REQUIRED BCIter CDATA #IMPLIED >
+
+<!ELEMENT RunType ( #PCDATA )>
+<!ATTLIST RunType fmStep (False|True) "False" batch (False|True) "False" upDesc (False|True) "False" upChk (False|True) "False" upAS (False|True) "False">
+
+<!ELEMENT DName ( #PCDATA ) >
+
+<!ELEMENT Res ( #PCDATA ) >
+
+<!ELEMENT DVer ( #PCDATA ) >
+
+<!ELEMENT TSet ( #PCDATA ) >
+
+<!ELEMENT TInst ( #PCDATA ) >
+
+<!ELEMENT DIter (Step?,Action+,Summary?,NodeArgs)>
+<!ATTLIST DIter rID ID #REQUIRED iterID CDATA #REQUIRED>
+
+<!ELEMENT DocLocation ( #PCDATA )>
+
+<!ELEMENT Action (AName,AIter*,(Step|HtmlStep|Action)*,Summary,NodeArgs) >
+<!ATTLIST Action rID ID #REQUIRED>
+
+<!ELEMENT AIter ((Step|HtmlStep|Action)*,Summary?,NodeArgs) >
+<!ATTLIST AIter rID ID #REQUIRED iterID CDATA #REQUIRED>
+
+<!ELEMENT AName ( #PCDATA ) >
+
+<!ELEMENT Step (Obj,Details,Time,(Step|HtmlStep|Doc)*,NodeArgs) >
+<!ATTLIST Step rID ID #REQUIRED retval CDATA #IMPLIED>
+
+<!ELEMENT HtmlStep (HTML,(Step|HtmlStep|Doc)*,NodeArgs) >
+<!ATTLIST HtmlStep rID ID #REQUIRED >
+
+<!ELEMENT Obj ( #PCDATA ) >
+<!ATTLIST Obj plainTxt (False|True) "True">
+
+<!ELEMENT Details ( #PCDATA ) >
+<!ATTLIST Details plainTxt (False|True) "True">
+
+<!ELEMENT Time ( #PCDATA ) >
+
+<!ELEMENT HTML ( #PCDATA ) >
+
+<!ELEMENT Disp ( #PCDATA ) >
+
+<!ELEMENT NodeArgs (Disp,TopPane?,BtmPane?)>
+<!ATTLIST NodeArgs eType CDATA #REQUIRED icon CDATA #REQUIRED nRep CDATA #REQUIRED filter (False|True) "True">
+<!ATTLIST NodeArgs status (Passed|Failed|Done|Warning|Information) "Done">
+<!ATTLIST NodeArgs iconSel CDATA #IMPLIED nType CDATA #IMPLIED >
+
+<!ELEMENT TopPane (Path)>
+
+<!ELEMENT BtmPane ( (Path|WR)?,ASHilite?)>
+<!ATTLIST BtmPane vType CDATA "HTML">
+
+<!ELEMENT Path ( #PCDATA ) >
+
+<!ELEMENT ASHilite ( #PCDATA ) >
+
+<!ELEMENT WR ( #PCDATA ) >
+
+<!ELEMENT DT (NodeArgs) >
+<!ATTLIST DT rID ID #REQUIRED>
+
+<!ELEMENT Summary (Param*)>
+<!ATTLIST Summary sTime CDATA #IMPLIED eTime CDATA #IMPLIED passed CDATA #IMPLIED failed CDATA #IMPLIED warnings CDATA #IMPLIED retval CDATA #IMPLIED stopped (False|True) "False" >
+
+<!ELEMENT Param (ParamName,ParamVal)+ >
+<!ATTLIST Param paramInOut (In|Out) "In">
+
+<!ELEMENT ParamName ( #PCDATA ) >
+
+<!ELEMENT ParamVal ( #PCDATA ) >
+
+]
+>
+<Report ver="2.0" tmZone="India Standard Time">
+<General productName="QuickTest Professional" productVer="9.0" os="Windows XP" host="COMPUTER_1"><DocLocation><![CDATA[C:\QTP\DriverFile]]></DocLocation></General>
+<Doc rID="T1"   productName= "QuickTest Professional"  >
+<DName><![CDATA[DriverFile]]></DName>
+<Res><![CDATA[Res62]]></Res>
+<DT rID="T2">
+<NodeArgs eType="Table" icon="2" nRep="4" filter="False" >
+<Disp><![CDATA[Run-Time Data Table]]></Disp>
+<BtmPane vType="Table">
+<Path><![CDATA[Default.xls]]></Path>
+</BtmPane>
+</NodeArgs>
+</DT>
+<DIter rID="T3" iterID="1" >
+<Action rID="T4">
+<AName><![CDATA[Action1]]></AName>
+<Step rID="T5" >
+<Obj plainTxt="False" ><![CDATA[[ txtUser ].SetText]]></Obj>
+<Details plainTxt="False" ><![CDATA["administrator"]]></Details>
+<Time><![CDATA[04-Dec-2012 - 20:57:34]]></Time>
+<NodeArgs eType="Replay" icon="5" nRep="9" >
+<Disp><![CDATA[[ txtUser ].SetText]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T6" >
+<Obj plainTxt="False" ><![CDATA[[ txtPassword ].SetText]]></Obj>
+<Details plainTxt="False" ><![CDATA["rdt"]]></Details>
+<Time><![CDATA[04-Dec-2012 - 20:57:34]]></Time>
+<NodeArgs eType="Replay" icon="5" nRep="11" >
+<Disp><![CDATA[[ txtPassword ].SetText]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T7" >
+<Obj plainTxt="False" ><![CDATA[[ Ok ].Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-Dec-2012 - 20:57:34]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="13" >
+<Disp><![CDATA[[ Ok ].Click]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T8" >
+<Obj plainTxt="False" ><![CDATA[[ SSListBar ].Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[82, 564]]></Details>
+<Time><![CDATA[04-Dec-2012 - 20:57:35]]></Time>
+<NodeArgs eType="Replay" icon="7" nRep="15" >
+<Disp><![CDATA[[ SSListBar ].Click]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T9" >
+<Obj plainTxt="False" ><![CDATA[[ SSListBar ].Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[74, 171]]></Details>
+<Time><![CDATA[04-Dec-2012 - 20:57:35]]></Time>
+<NodeArgs eType="Replay" icon="7" nRep="17" >
+<Disp><![CDATA[[ SSListBar ].Click]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T10" >
+<Obj plainTxt="False" ><![CDATA[[ V ].Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-Dec-2012 - 20:57:36]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="19" >
+<Disp><![CDATA[[ V ].Click]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T11" >
+<Obj plainTxt="False" ><![CDATA[[ txtVendorName ].SetText]]></Obj>
+<Details plainTxt="False" ><![CDATA["NORMAL VENDOR BWP1"]]></Details>
+<Time><![CDATA[04-Dec-2012 - 20:57:36]]></Time>
+<NodeArgs eType="Replay" icon="5" nRep="21" >
+<Disp><![CDATA[[ txtVendorName ].SetText]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T12" >
+<Obj plainTxt="False" ><![CDATA[[ &Manual ].Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-Dec-2012 - 20:57:37]]></Time>
+<NodeArgs eType="Replay" icon="8" nRep="23" >
+<Disp><![CDATA[[ &Manual ].Click]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T13" >
+<Obj plainTxt="False" ><![CDATA[[ VbEditor ].Type]]></Obj>
+<Details plainTxt="False" ><![CDATA["01SPWCLACLA015"]]></Details>
+<Time><![CDATA[04-Dec-2012 - 20:57:37]]></Time>
+<NodeArgs eType="Replay" icon="5" nRep="25" >
+<Disp><![CDATA[[ VbEditor ].Type]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T14" >
+<Obj plainTxt="False" ><![CDATA[[ VbEditor ].Type]]></Obj>
+<Details plainTxt="False" ><![CDATA["12"]]></Details>
+<Time><![CDATA[04-Dec-2012 - 20:57:38]]></Time>
+<NodeArgs eType="Replay" icon="5" nRep="27" >
+<Disp><![CDATA[[ VbEditor ].Type]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T15" >
+<Obj plainTxt="False" ><![CDATA[[ VbEditor ].Type]]></Obj>
+<Details plainTxt="False" ><![CDATA["120.898989"]]></Details>
+<Time><![CDATA[04-Dec-2012 - 20:57:39]]></Time>
+<NodeArgs eType="Replay" icon="5" nRep="29" >
+<Disp><![CDATA[[ VbEditor ].Type]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T16" >
+<Obj plainTxt="False" ><![CDATA[[ VbEditor ].Type]]></Obj>
+<Details plainTxt="False" ><![CDATA["12.89"]]></Details>
+<Time><![CDATA[04-Dec-2012 - 20:57:40]]></Time>
+<NodeArgs eType="Replay" icon="5" nRep="31" >
+<Disp><![CDATA[[ VbEditor ].Type]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T17" >
+<Obj plainTxt="False" ><![CDATA[[ VbEditor ].Type]]></Obj>
+<Details plainTxt="False" ><![CDATA["12.23"]]></Details>
+<Time><![CDATA[04-Dec-2012 - 20:57:41]]></Time>
+<NodeArgs eType="Replay" icon="5" nRep="33" >
+<Disp><![CDATA[[ VbEditor ].Type]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T18" >
+<Obj plainTxt="False" ><![CDATA[[ VbEditor ].Type]]></Obj>
+<Details plainTxt="False" ><![CDATA["13.23"]]></Details>
+<Time><![CDATA[04-Dec-2012 - 20:57:42]]></Time>
+<NodeArgs eType="Replay" icon="5" nRep="35" >
+<Disp><![CDATA[[ VbEditor ].Type]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T19" >
+<Obj plainTxt="False" ><![CDATA[[ VbEditor ].Type]]></Obj>
+<Details plainTxt="False" ><![CDATA["14.34"]]></Details>
+<Time><![CDATA[04-Dec-2012 - 20:57:42]]></Time>
+<NodeArgs eType="Replay" icon="5" nRep="37" >
+<Disp><![CDATA[[ VbEditor ].Type]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T20" >
+<Obj plainTxt="False" ><![CDATA[[ VbEditor ].Type]]></Obj>
+<Details plainTxt="False" ><![CDATA["16.34"]]></Details>
+<Time><![CDATA[04-Dec-2012 - 20:57:43]]></Time>
+<NodeArgs eType="Replay" icon="5" nRep="39" >
+<Disp><![CDATA[[ VbEditor ].Type]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T21" >
+<Obj plainTxt="False" ><![CDATA[[ VbEditor ].Type]]></Obj>
+<Details plainTxt="False" ><![CDATA["1.234598"]]></Details>
+<Time><![CDATA[04-Dec-2012 - 20:57:44]]></Time>
+<NodeArgs eType="Replay" icon="5" nRep="41" >
+<Disp><![CDATA[[ VbEditor ].Type]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T22" >
+<Obj plainTxt="False" ><![CDATA[[ VbEditor ].Type]]></Obj>
+<Details plainTxt="False" ><![CDATA["1.987654"]]></Details>
+<Time><![CDATA[04-Dec-2012 - 20:57:45]]></Time>
+<NodeArgs eType="Replay" icon="5" nRep="43" >
+<Disp><![CDATA[[ VbEditor ].Type]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T23" >
+<Obj plainTxt="False" ><![CDATA[[ VbEditor ].Type]]></Obj>
+<Details plainTxt="False" ><![CDATA["1.897879"]]></Details>
+<Time><![CDATA[04-Dec-2012 - 20:57:46]]></Time>
+<NodeArgs eType="Replay" icon="5" nRep="45" >
+<Disp><![CDATA[[ VbEditor ].Type]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T24" >
+<Obj plainTxt="False" ><![CDATA[[ VbEditor ].Type]]></Obj>
+<Details plainTxt="False" ><![CDATA["2.436589"]]></Details>
+<Time><![CDATA[04-Dec-2012 - 20:57:46]]></Time>
+<NodeArgs eType="Replay" icon="5" nRep="47" >
+<Disp><![CDATA[[ VbEditor ].Type]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T25" >
+<Obj plainTxt="False" ><![CDATA[[ VbEditor ].Type]]></Obj>
+<Details plainTxt="False" ><![CDATA["1.756348"]]></Details>
+<Time><![CDATA[04-Dec-2012 - 20:57:47]]></Time>
+<NodeArgs eType="Replay" icon="5" nRep="49" >
+<Disp><![CDATA[[ VbEditor ].Type]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T26" >
+<Obj plainTxt="False" ><![CDATA[[ frmPOForm ].Activate]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-Dec-2012 - 20:57:50]]></Time>
+<NodeArgs eType="Replay" icon="9" nRep="51" status="Warning" >
+<Disp><![CDATA[[ frmPOForm ].Activate]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T27" >
+<Obj plainTxt="False" ><![CDATA[[ frmPOForm ]]]></Obj>
+<Details plainTxt="False" ><![CDATA[Unspecified error
+]]></Details>
+<Time><![CDATA[04-Dec-2012 - 20:57:50]]></Time>
+<Step rID="T28" >
+<Obj plainTxt="False" ><![CDATA[[ frmPOForm ]]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object's physical description:<br>Text = Purchase Order<br>class name = VbWindow<br>]]></Details>
+<Time><![CDATA[04-Dec-2012 - 20:57:50]]></Time>
+<NodeArgs eType="Replay" icon="10" nRep="53" status="Warning" nType="Description" >
+<Disp><![CDATA[[ frmPOForm ]]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Replay" icon="9" nRep="52" status="Failed" nType="Run Error" >
+<Disp><![CDATA[[ frmPOForm ]]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T29" >
+<Obj plainTxt="False" ><![CDATA[Run Error]]></Obj>
+<Details plainTxt="False" ><![CDATA[Unspecified error<BR><BR>Function file: C:\QTP\Script\poCreationWithoutItemHelp.vbs<BR>Line (252): &quot;	VbWindow(purchaseform).Activate&quot;.]]></Details>
+<Time><![CDATA[04-Dec-2012 - 20:57:51]]></Time>
+<NodeArgs eType="Replay" icon="10" nRep="54" status="Failed" >
+<Disp><![CDATA[Run Error]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T30" >
+<Obj plainTxt="False" ><![CDATA[[ SSListBar ].Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[67, 400]]></Details>
+<Time><![CDATA[04-Dec-2012 - 20:59:47]]></Time>
+<NodeArgs eType="Replay" icon="7" nRep="56" >
+<Disp><![CDATA[[ SSListBar ].Click]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T31" >
+<Obj plainTxt="False" ><![CDATA[[ V ].Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[04-Dec-2012 - 20:59:48]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="58" >
+<Disp><![CDATA[[ V ].Click]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T32" >
+<Obj plainTxt="False" ><![CDATA[[ txtVendorName ].SetText]]></Obj>
+<Details plainTxt="False" ><![CDATA["NORMAL VENDOR BWP1"]]></Details>
+<Time><![CDATA[04-Dec-2012 - 20:59:48]]></Time>
+<NodeArgs eType="Replay" icon="5" nRep="60" >
+<Disp><![CDATA[[ txtVendorName ].SetText]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T33" >
+<Obj plainTxt="False" ><![CDATA[[ Edit ].Type]]></Obj>
+<Details plainTxt="False" ><![CDATA[""]]></Details>
+<Time><![CDATA[04-Dec-2012 - 20:59:49]]></Time>
+<NodeArgs eType="Replay" icon="11" nRep="62" >
+<Disp><![CDATA[[ Edit ].Type]]></Disp>
+</NodeArgs>
+</Step>
+<Summary sTime="04-Dec-2012 - 20:57:33" eTime="04-Dec-2012 - 20:59:49" passed="0" failed="2" warnings="2" ></Summary>
+<NodeArgs eType="StartAction" icon="4" nRep="7" status="Failed" >
+<Disp><![CDATA[Action1 Summary]]></Disp>
+</NodeArgs>
+</Action>
+<NodeArgs eType="StartIteration" icon="3" nRep="6" status="Failed" >
+<Disp><![CDATA[DriverFile Iteration 1 (Row 1)]]></Disp>
+</NodeArgs>
+</DIter>
+<Summary sTime="04-Dec-2012 - 20:57:33" eTime="04-Dec-2012 - 20:59:49" passed="0" failed="2" warnings="2" ></Summary>
+<NodeArgs eType="StartTest" icon="1" nRep="3" status="Failed" >
+<Disp><![CDATA[Test DriverFile Summary]]></Disp>
+</NodeArgs>
+</Doc>
+</Report>

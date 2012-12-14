@@ -1,0 +1,201 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE Report
+[
+<!ELEMENT Report (General ,(Doc|BPT)) >
+<!ATTLIST Report ver CDATA #REQUIRED tmZone CDATA #REQUIRED>
+
+<!ELEMENT General ( DocLocation ) >
+<!ATTLIST General productName CDATA #REQUIRED productVer CDATA #REQUIRED os CDATA #REQUIRED host CDATA #REQUIRED>
+
+<!ELEMENT BPT (DName,Res,DVer?,TSet?,TInst?,NodeArgs,Doc*) >
+<!ATTLIST BPT rID ID #REQUIRED >
+
+<!ELEMENT Doc (DName,Res,DVer?,TSet?,TInst?,RunType?,DT?,Step*,DIter*,Action*,Summary?,NodeArgs?) >
+<!ATTLIST Doc rID ID #REQUIRED type (Test|BC) "Test" productName CDATA #REQUIRED BCIter CDATA #IMPLIED >
+
+<!ELEMENT RunType ( #PCDATA )>
+<!ATTLIST RunType fmStep (False|True) "False" batch (False|True) "False" upDesc (False|True) "False" upChk (False|True) "False" upAS (False|True) "False">
+
+<!ELEMENT DName ( #PCDATA ) >
+
+<!ELEMENT Res ( #PCDATA ) >
+
+<!ELEMENT DVer ( #PCDATA ) >
+
+<!ELEMENT TSet ( #PCDATA ) >
+
+<!ELEMENT TInst ( #PCDATA ) >
+
+<!ELEMENT DIter (Step?,Action+,Summary?,NodeArgs)>
+<!ATTLIST DIter rID ID #REQUIRED iterID CDATA #REQUIRED>
+
+<!ELEMENT DocLocation ( #PCDATA )>
+
+<!ELEMENT Action (AName,AIter*,(Step|HtmlStep|Action)*,Summary,NodeArgs) >
+<!ATTLIST Action rID ID #REQUIRED>
+
+<!ELEMENT AIter ((Step|HtmlStep|Action)*,Summary?,NodeArgs) >
+<!ATTLIST AIter rID ID #REQUIRED iterID CDATA #REQUIRED>
+
+<!ELEMENT AName ( #PCDATA ) >
+
+<!ELEMENT Step (Obj,Details,Time,(Step|HtmlStep|Doc)*,NodeArgs) >
+<!ATTLIST Step rID ID #REQUIRED retval CDATA #IMPLIED>
+
+<!ELEMENT HtmlStep (HTML,(Step|HtmlStep|Doc)*,NodeArgs) >
+<!ATTLIST HtmlStep rID ID #REQUIRED >
+
+<!ELEMENT Obj ( #PCDATA ) >
+<!ATTLIST Obj plainTxt (False|True) "True">
+
+<!ELEMENT Details ( #PCDATA ) >
+<!ATTLIST Details plainTxt (False|True) "True">
+
+<!ELEMENT Time ( #PCDATA ) >
+
+<!ELEMENT HTML ( #PCDATA ) >
+
+<!ELEMENT Disp ( #PCDATA ) >
+
+<!ELEMENT NodeArgs (Disp,TopPane?,BtmPane?)>
+<!ATTLIST NodeArgs eType CDATA #REQUIRED icon CDATA #REQUIRED nRep CDATA #REQUIRED filter (False|True) "True">
+<!ATTLIST NodeArgs status (Passed|Failed|Done|Warning|Information) "Done">
+<!ATTLIST NodeArgs iconSel CDATA #IMPLIED nType CDATA #IMPLIED >
+
+<!ELEMENT TopPane (Path)>
+
+<!ELEMENT BtmPane ( (Path|WR)?,ASHilite?)>
+<!ATTLIST BtmPane vType CDATA "HTML">
+
+<!ELEMENT Path ( #PCDATA ) >
+
+<!ELEMENT ASHilite ( #PCDATA ) >
+
+<!ELEMENT WR ( #PCDATA ) >
+
+<!ELEMENT DT (NodeArgs) >
+<!ATTLIST DT rID ID #REQUIRED>
+
+<!ELEMENT Summary (Param*)>
+<!ATTLIST Summary sTime CDATA #IMPLIED eTime CDATA #IMPLIED passed CDATA #IMPLIED failed CDATA #IMPLIED warnings CDATA #IMPLIED retval CDATA #IMPLIED stopped (False|True) "False" >
+
+<!ELEMENT Param (ParamName,ParamVal)+ >
+<!ATTLIST Param paramInOut (In|Out) "In">
+
+<!ELEMENT ParamName ( #PCDATA ) >
+
+<!ELEMENT ParamVal ( #PCDATA ) >
+
+]
+>
+<Report ver="2.0" tmZone="India Standard Time">
+<General productName="QuickTest Professional" productVer="9.0" os="Windows XP" host="COMPUTER_1"><DocLocation><![CDATA[C:\QTP\DriverFile]]></DocLocation></General>
+<Doc rID="T1"   productName= "QuickTest Professional"  >
+<DName><![CDATA[DriverFile]]></DName>
+<Res><![CDATA[Res76]]></Res>
+<DT rID="T2">
+<NodeArgs eType="Table" icon="2" nRep="4" filter="False" >
+<Disp><![CDATA[Run-Time Data Table]]></Disp>
+<BtmPane vType="Table">
+<Path><![CDATA[Default.xls]]></Path>
+</BtmPane>
+</NodeArgs>
+</DT>
+<DIter rID="T3" iterID="1" >
+<Action rID="T4">
+<AName><![CDATA[Action1]]></AName>
+<Step rID="T5" >
+<Obj plainTxt="False" ><![CDATA[[ txtUser ].SetText]]></Obj>
+<Details plainTxt="False" ><![CDATA["administrator"]]></Details>
+<Time><![CDATA[12-Dec-2012 - 0:04:33]]></Time>
+<NodeArgs eType="Replay" icon="5" nRep="9" >
+<Disp><![CDATA[[ txtUser ].SetText]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T6" >
+<Obj plainTxt="False" ><![CDATA[[ txtPassword ].SetText]]></Obj>
+<Details plainTxt="False" ><![CDATA["rdt"]]></Details>
+<Time><![CDATA[12-Dec-2012 - 0:04:33]]></Time>
+<NodeArgs eType="Replay" icon="5" nRep="11" >
+<Disp><![CDATA[[ txtPassword ].SetText]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T7" >
+<Obj plainTxt="False" ><![CDATA[[ Ok ].Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[12-Dec-2012 - 0:04:35]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="13" >
+<Disp><![CDATA[[ Ok ].Click]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T8" >
+<Obj plainTxt="False" ><![CDATA[[ SSListBar ].Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[82, 564]]></Details>
+<Time><![CDATA[12-Dec-2012 - 0:04:36]]></Time>
+<NodeArgs eType="Replay" icon="7" nRep="15" >
+<Disp><![CDATA[[ SSListBar ].Click]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T9" >
+<Obj plainTxt="False" ><![CDATA[[ SSListBar ].Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[74, 171]]></Details>
+<Time><![CDATA[12-Dec-2012 - 0:04:36]]></Time>
+<NodeArgs eType="Replay" icon="7" nRep="17" >
+<Disp><![CDATA[[ SSListBar ].Click]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T10" >
+<Obj plainTxt="False" ><![CDATA[[ VbButton ].Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[12-Dec-2012 - 0:04:49]]></Time>
+<NodeArgs eType="Replay" icon="6" nRep="19" status="Warning" >
+<Disp><![CDATA[[ VbButton ].Click]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T11" >
+<Obj plainTxt="False" ><![CDATA[[ VbButton ]]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object is disabled]]></Details>
+<Time><![CDATA[12-Dec-2012 - 0:04:49]]></Time>
+<Step rID="T12" >
+<Obj plainTxt="False" ><![CDATA[[ VbButton ]]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object's physical description:<br>vbname = cmdVendHelp<br>Text = V<br>class name = VbButton<br>]]></Details>
+<Time><![CDATA[12-Dec-2012 - 0:04:49]]></Time>
+<NodeArgs eType="Replay" icon="8" nRep="21" status="Warning" nType="Description" >
+<Disp><![CDATA[[ VbButton ]]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Replay" icon="6" nRep="20" status="Failed" nType="Run Error" >
+<Disp><![CDATA[[ VbButton ]]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T13" >
+<Obj plainTxt="False" ><![CDATA[Stop Run]]></Obj>
+<Details plainTxt="False" ><![CDATA[Run stopped by user.]]></Details>
+<Time><![CDATA[12-Dec-2012 - 0:04:49]]></Time>
+<NodeArgs eType="General" icon="9" nRep="22" >
+<Disp><![CDATA[Stop Run]]></Disp>
+</NodeArgs>
+</Step>
+<Summary sTime="12-Dec-2012 - 0:04:31" eTime="12-Dec-2012 - 0:04:49" passed="0" failed="1" warnings="2" ></Summary>
+<NodeArgs eType="StartAction" icon="4" nRep="7" status="Failed" >
+<Disp><![CDATA[Action1 Summary]]></Disp>
+</NodeArgs>
+</Action>
+<NodeArgs eType="StartIteration" icon="3" nRep="6" status="Failed" >
+<Disp><![CDATA[DriverFile Iteration 1 (Row 1)]]></Disp>
+</NodeArgs>
+</DIter>
+<Step rID="T14" >
+<Obj plainTxt="False" ><![CDATA[Stop Run]]></Obj>
+<Details plainTxt="False" ><![CDATA[Run stopped by user.]]></Details>
+<Time><![CDATA[12-Dec-2012 - 0:04:49]]></Time>
+<NodeArgs eType="General" icon="10" nRep="25" >
+<Disp><![CDATA[Stop Run]]></Disp>
+</NodeArgs>
+</Step>
+<Summary sTime="12-Dec-2012 - 0:04:30" eTime="12-Dec-2012 - 0:04:49" passed="0" failed="1" warnings="2" stopped="True" ></Summary>
+<NodeArgs eType="StartTest" icon="1" nRep="3" status="Failed" >
+<Disp><![CDATA[Test DriverFile Summary]]></Disp>
+</NodeArgs>
+</Doc>
+</Report>
