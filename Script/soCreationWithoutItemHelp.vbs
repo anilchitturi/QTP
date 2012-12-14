@@ -80,7 +80,7 @@ Function soCreationWithoutItemHelp
 '------------------------------------------------------
 	Dim ItemCode
 	Set ItemCode= Description.Create()
-	ItemCode("Class Name").value = "VbEditor"
+	ItemCode("Class Name").value = "WinEditor"
 	ItemCode("window id").value = "12759"
 	ItemCode("abs_x").value = "148"
 	ItemCode("abs_y").value = "383"
@@ -89,7 +89,7 @@ Function soCreationWithoutItemHelp
 	
 	Dim ItemQty
 	Set ItemQty= Description.Create()
-	ItemQty("Class Name").value = "VbEditor"
+	ItemQty("Class Name").value = "WinEditor"
 	ItemQty("window id").value = "12759"
 	ItemQty("abs_x").value = "520"
 	ItemQty("abs_y").value = "383"	
@@ -98,7 +98,7 @@ Function soCreationWithoutItemHelp
 	
 	Dim ItemPrice
 	Set ItemPrice= Description.Create()
-	ItemPrice("Class Name").value = "VbEditor"
+	ItemPrice("Class Name").value = "WinEditor"
 	ItemPrice("window id").value = "12759"
 	ItemPrice("abs_x").value = "644"
 	ItemPrice("abs_y").value = "383"		
@@ -107,7 +107,7 @@ Function soCreationWithoutItemHelp
 
 	Dim ItemDiscs
 	Set ItemDiscs= Description.Create()
-	ItemDiscs("Class Name").value = "VbEditor"
+	ItemDiscs("Class Name").value = "WinEditor"
 	ItemDiscs("window id").value = "12759"
 	ItemDiscs("abs_x").value = "1077"
 	ItemDiscs("abs_y").value = "383"	
@@ -116,21 +116,21 @@ Function soCreationWithoutItemHelp
 	
 	Dim HeaderDiscs
 	Set HeaderDiscs= Description.Create()
-	HeaderDiscs("Class Name").value = "VbEditor"
-	ItemDiscs("window id").value = "2"
+	HeaderDiscs("Class Name").value = "WinEditor"
+	HeaderDiscs("window id").value = "2"
 	HeaderDiscs("x").value = "811"
 	HeaderDiscs("y").value = "117"
 	
 	Dim Add1
 	Set Add1= Description.Create()
-	Add1("Class Name").value = "VbEdit"
+	Add1("Class Name").value = "WinEdit"
 	Add1("vbname").value = "txtFreight"
 	Add1("x").value = "69"
 	Add1("y").value = "527"		
 	
 	Dim Add2
 	Set Add2= Description.Create()
-	Add2("Class Name").value = "VbEdit"
+	Add2("Class Name").value = "WinEdit"
 	Add2("vbname").value = "txtInsurance"
 	Add2("x").value = "233"
 	Add2("y").value = "527"		
@@ -142,14 +142,14 @@ Function soCreationWithoutItemHelp
 	
 	For i = 1 to nRow
 		DataTable.SetCurrentRow(i)
-		vbWindow(salesform).VbEditor(ItemCode).Type DataTable.Value("ItemCode","soTestData") 
+		vbWindow(salesform).vbEditor(ItemCode).Type DataTable.Value("ItemCode","soTestData") 
 		button.SendKeys "{TAB 2}"
-		vbWindow(salesform).VbEditor(ItemQty).Type DataTable.Value("ItemQty","soTestData")
+		vbWindow(salesform).vbEditor(ItemQty).Type DataTable.Value("ItemQty","soTestData")
 		button.SendKeys "{TAB}"
 		button.SendKeys "{Delete}"
-		vbWindow(salesform).VbEditor(ItemPrice).Type DataTable.Value("ItemPrice","soTestData")
+		vbWindow(salesform).vbEditor(ItemPrice).Type DataTable.Value("ItemPrice","soTestData")
 		button.SendKeys "{TAB}"
-		vbWindow(salesform).VbEditor(ItemDiscs).Type DataTable.Value("SalesItemDisc","vendor")
+		'vbWindow(salesform).vbEditor(ItemDiscs).Type DataTable.Value("SalesItemDisc","vendor")
 		button.SendKeys "{TAB}"
 		button.SendKeys "{TAB}"
 		wait 1
@@ -196,7 +196,6 @@ Function soCreationWithoutItemHelp
 	Set NetValue = Description.Create()
 	NetValue("Class Name").Value = "vbEdit"
 	NetValue("vbname").value = "txtNetAmount"
-	
 '--------------------------------------------------------------------------------------------------------------
 	VbWindow(salesform).Activate
 '--------------- For saving the PO document -------------------------------
@@ -226,7 +225,6 @@ Function soCreationWithoutItemHelp
 	DataTable.value("AddVen","soResults")=AddVen
 	DataTable.value("TotalValue","soResults")=TotalValue
 	DataTable.value("NetValue","soResults")=NetValue
-	
 '--------- Exporting the Results from QTP dataTable to External Results Sheet -------------
 	DataTable.ExportSheet "C:\QTP\Results\Results.xls","soResults"
 
