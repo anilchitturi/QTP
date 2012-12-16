@@ -18,7 +18,7 @@ Function soCreationWithoutItemHelp
 	
 	Dim CusField
 	Set CusField= Description.Create()
-	CusField("Class Name").value = "VbEditor"
+	CusField("Class Name").value = "WinEditor"
 	CusField("window id").value = "2"
 	CusField("width").value = "184"
 	CusField("x").value = "128"
@@ -45,14 +45,20 @@ Function soCreationWithoutItemHelp
 	wait 1
 	button.SendKeys "{Down}"
 	
-	button.SendKeys "{Tab 3}"
+	button.SendKeys "{Tab}"
+	wait 1
+	button.SendKeys "{Tab}"
+	wait 1
+	button.SendKeys "{Tab}"
 	DataTable.AddSheet("vendor")
 	DataTable.ImportSheet "C:\QTP\TestData\TestData.xls","vendor","vendor"	
-	button.SendKeys "%{Down}"
-	button.SendKeys "{Down}"
-	button.SendKeys "{Delete}"
+	
+	'button.SendKeys "{Down}"
+	'button.SendKeys "{Delete}"
 	customername = DataTable.Value("Customer","vendor") 
-	vbWindow(salesform).VbEditor(CusField).Set customername
+	vbWindow(salesform).WinEditor(CusField).Type customername
+	button.SendKeys "%{Down}"
+	button.SendKeys "{Enter}"
 	button.SendKeys "{Tab}"
 	wait 1
 	button.SendKeys "{Tab}"
@@ -82,37 +88,31 @@ Function soCreationWithoutItemHelp
 	Set ItemCode= Description.Create()
 	ItemCode("Class Name").value = "WinEditor"
 	ItemCode("window id").value = "12759"
-	ItemCode("abs_x").value = "148"
-	ItemCode("abs_y").value = "383"
 	ItemCode("x").value = "151"
-	ItemCode("y").value = "386"
+	ItemCode("width").value = "118"
+	
 	
 	Dim ItemQty
 	Set ItemQty= Description.Create()
 	ItemQty("Class Name").value = "WinEditor"
 	ItemQty("window id").value = "12759"
-	ItemQty("abs_x").value = "520"
-	ItemQty("abs_y").value = "383"	
 	ItemQty("x").value = "523"
-	ItemQty("y").value = "386"
-	
+	ItemQty("width").value = "118"
+		
 	Dim ItemPrice
 	Set ItemPrice= Description.Create()
 	ItemPrice("Class Name").value = "WinEditor"
 	ItemPrice("window id").value = "12759"
-	ItemPrice("abs_x").value = "644"
-	ItemPrice("abs_y").value = "383"		
 	ItemPrice("x").value = "647"
-	ItemPrice("y").value = "386"
-
+	ItemPrice("width").value = "118"
+	
 	Dim ItemDiscs
 	Set ItemDiscs= Description.Create()
 	ItemDiscs("Class Name").value = "WinEditor"
 	ItemDiscs("window id").value = "12759"
-	ItemDiscs("abs_x").value = "1077"
-	ItemDiscs("abs_y").value = "383"	
 	ItemDiscs("x").value = "1080"
-	ItemDiscs("y").value = "386"	
+	ItemDiscs("width").value = "118"
+	
 	
 	Dim HeaderDiscs
 	Set HeaderDiscs= Description.Create()
@@ -120,17 +120,18 @@ Function soCreationWithoutItemHelp
 	HeaderDiscs("window id").value = "2"
 	HeaderDiscs("x").value = "811"
 	HeaderDiscs("y").value = "117"
+	HeaderDiscs("width").value = "163"
 	
 	Dim Add1
 	Set Add1= Description.Create()
-	Add1("Class Name").value = "WinEdit"
+	Add1("Class Name").value = "vbEdit"
 	Add1("vbname").value = "txtFreight"
 	Add1("x").value = "69"
 	Add1("y").value = "527"		
 	
 	Dim Add2
 	Set Add2= Description.Create()
-	Add2("Class Name").value = "WinEdit"
+	Add2("Class Name").value = "vbEdit"
 	Add2("vbname").value = "txtInsurance"
 	Add2("x").value = "233"
 	Add2("y").value = "527"		
@@ -142,29 +143,39 @@ Function soCreationWithoutItemHelp
 	
 	For i = 1 to nRow
 		DataTable.SetCurrentRow(i)
-		vbWindow(salesform).vbEditor(ItemCode).Type DataTable.Value("ItemCode","soTestData") 
+		if i > 1 then
+		ItemCode("x").value = "27"
+		ItemQty("x").value = "399"
+		ItemPrice("x").value = "523"
+		ItemDiscs("x").value = "956"
+		end if
+		vbWindow(salesform).WinEditor(ItemCode).Type DataTable.Value("ItemCode","soTestData") 
 		button.SendKeys "{TAB 2}"
-		vbWindow(salesform).vbEditor(ItemQty).Type DataTable.Value("ItemQty","soTestData")
+		vbWindow(salesform).WinEditor(ItemQty).Type DataTable.Value("ItemQty","soTestData")
 		button.SendKeys "{TAB}"
 		button.SendKeys "{Delete}"
-		vbWindow(salesform).vbEditor(ItemPrice).Type DataTable.Value("ItemPrice","soTestData")
+		vbWindow(salesform).WinEditor(ItemPrice).Type DataTable.Value("ItemPrice","soTestData")
 		button.SendKeys "{TAB}"
-		'vbWindow(salesform).vbEditor(ItemDiscs).Type DataTable.Value("SalesItemDisc","vendor")
+		vbWindow(salesform).WinEditor(ItemDiscs).Type DataTable.Value("SalesItemDisc","soTestData")
 		button.SendKeys "{TAB}"
 		button.SendKeys "{TAB}"
-		wait 1
-		button.SendKeys "^{N}"
+		'wait 1
+		button.SendKeys "{TAB}"
 	Next
 	button.SendKeys "{F4}"
 	
 	DataTable.AddSheet("AddlCharges")
 	DataTable.ImportSheet "C:\QTP\TestData\TestData.xls","AddlCharges","AddlCharges"	
-	
-	vbWindow(salesform).VbEditor(Add1).Set DataTable.Value("Add1","AddlCharges") 
-	vbWindow(salesform).VbEditor(Add2).Set DataTable.Value("Add2","AddlCharges") 
-	
+	'vbWindow(salesform).VbEdit(Add1).DblClick
+	button.SendKeys "{Delete}"
+	vbWindow(salesform).VbEdit(Add1).Set DataTable.Value("Add1","AddlCharges") 
+	'vbWindow(salesform).VbEdit(Add2).DblClick
+	button.SendKeys "{Delete}"
+	vbWindow(salesform).VbEdit(Add2).Set DataTable.Value("Add2","AddlCharges") 
 	button.SendKeys "{TAB}"
-
+	wait 1
+	vbWindow(salesform).WinEditor(HeaderDiscs).Type DataTable.Value("SalesHeaderDisc","vendor")
+	button.SendKeys "{TAB}"
 '------------------------------------------------------------------------------------------------------------------------------------------
 	'============ For PO number created -==================
 	Dim soNumber
@@ -202,8 +213,8 @@ Function soCreationWithoutItemHelp
 	button.SendKeys "{F10}"
 	
 	button.SendKeys "{ENTER}"
-	wait 2
-	VbWindow(salesform).Activate
+
+	wait 1	
 '--------------- Saving values saved in PO screen objects ---------------------
 	soNumber = VbWindow(salesform).vbEdit(soNumber).GetROProperty("text")
 	ItemDisc = VbWindow(salesform).vbEdit(ItemDisc).GetROProperty("text")
@@ -211,6 +222,7 @@ Function soCreationWithoutItemHelp
 	AddVen = VbWindow(salesform).vbEdit(AddVen).GetROProperty("text")
 	TotalValue = VbWindow(salesform).vbEdit(TotalValue).GetROProperty("text")
 	NetValue = VbWindow(salesform).vbEdit(NetValue).GetROProperty("text")
+	
 '--------------- Importing previous RESULTS sheet and appending the current result ----------------------------	
 	DataTable.AddSheet("soResults")
 	DataTable.ImportSheet "C:\QTP\Results\Results.xls","soResults","soResults"
@@ -226,7 +238,7 @@ Function soCreationWithoutItemHelp
 	DataTable.value("TotalValue","soResults")=TotalValue
 	DataTable.value("NetValue","soResults")=NetValue
 '--------- Exporting the Results from QTP dataTable to External Results Sheet -------------
+	
 	DataTable.ExportSheet "C:\QTP\Results\Results.xls","soResults"
-
-	VbWindow(salesform).Activate
+	vbWindow(salesform).ActiveX(acx2).Click
 End Function

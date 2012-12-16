@@ -107,7 +107,7 @@
 <Step rID="T5" >
 <Obj plainTxt="False" ><![CDATA[[ txtUser ].SetText]]></Obj>
 <Details plainTxt="False" ><![CDATA["administrator"]]></Details>
-<Time><![CDATA[14-Dec-2012 - 21:45:24]]></Time>
+<Time><![CDATA[16-Dec-2012 - 20:34:35]]></Time>
 <NodeArgs eType="Replay" icon="5" nRep="10" >
 <Disp><![CDATA[[ txtUser ].SetText]]></Disp>
 </NodeArgs>
@@ -115,7 +115,7 @@
 <Step rID="T6" >
 <Obj plainTxt="False" ><![CDATA[[ txtPassword ].SetText]]></Obj>
 <Details plainTxt="False" ><![CDATA["rdt"]]></Details>
-<Time><![CDATA[14-Dec-2012 - 21:45:24]]></Time>
+<Time><![CDATA[16-Dec-2012 - 20:34:35]]></Time>
 <NodeArgs eType="Replay" icon="5" nRep="12" >
 <Disp><![CDATA[[ txtPassword ].SetText]]></Disp>
 </NodeArgs>
@@ -123,7 +123,7 @@
 <Step rID="T7" >
 <Obj plainTxt="False" ><![CDATA[[ Ok ].Click]]></Obj>
 <Details plainTxt="False" ><![CDATA[]]></Details>
-<Time><![CDATA[14-Dec-2012 - 21:45:24]]></Time>
+<Time><![CDATA[16-Dec-2012 - 20:34:35]]></Time>
 <NodeArgs eType="Replay" icon="6" nRep="14" >
 <Disp><![CDATA[[ Ok ].Click]]></Disp>
 </NodeArgs>
@@ -131,7 +131,7 @@
 <Step rID="T8" >
 <Obj plainTxt="False" ><![CDATA[[ SSListBar ].Click]]></Obj>
 <Details plainTxt="False" ><![CDATA[]]></Details>
-<Time><![CDATA[14-Dec-2012 - 21:45:25]]></Time>
+<Time><![CDATA[16-Dec-2012 - 20:34:36]]></Time>
 <NodeArgs eType="Replay" icon="7" nRep="16" >
 <Disp><![CDATA[[ SSListBar ].Click]]></Disp>
 </NodeArgs>
@@ -139,92 +139,316 @@
 <Step rID="T9" >
 <Obj plainTxt="False" ><![CDATA[[ SSListBar ].Click]]></Obj>
 <Details plainTxt="False" ><![CDATA[]]></Details>
-<Time><![CDATA[14-Dec-2012 - 21:45:26]]></Time>
+<Time><![CDATA[16-Dec-2012 - 20:34:37]]></Time>
 <NodeArgs eType="Replay" icon="7" nRep="18" >
 <Disp><![CDATA[[ SSListBar ].Click]]></Disp>
 </NodeArgs>
 </Step>
 <Step rID="T10" >
-<Obj plainTxt="False" ><![CDATA[Run Error]]></Obj>
-<Details plainTxt="False" ><![CDATA[Object doesn't support this property or method: 'vbWindow(...).VbEditor(...).Set'<BR>Function file: C:\QTP\Script\soCreationWithoutItemHelp.vbs<BR>Line (55): &quot;	vbWindow(salesform).VbEditor(CusField).Set customername&quot;.]]></Details>
-<Time><![CDATA[14-Dec-2012 - 21:45:27]]></Time>
-<NodeArgs eType="Replay" icon="8" nRep="19" status="Failed" >
-<Disp><![CDATA[Run Error]]></Disp>
+<Obj plainTxt="False" ><![CDATA[[ Edit ].Type]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[16-Dec-2012 - 20:34:40]]></Time>
+<NodeArgs eType="Replay" icon="8" nRep="20" >
+<Disp><![CDATA[[ Edit ].Type]]></Disp>
 </NodeArgs>
 </Step>
 <Step rID="T11" >
 <Obj plainTxt="False" ><![CDATA[[ txtDeliveryDate ].SetText]]></Obj>
-<Details plainTxt="False" ><![CDATA[#14-Dec-2012#]]></Details>
-<Time><![CDATA[14-Dec-2012 - 21:45:31]]></Time>
-<NodeArgs eType="Replay" icon="5" nRep="21" >
+<Details plainTxt="False" ><![CDATA[#16-Dec-2012#]]></Details>
+<Time><![CDATA[16-Dec-2012 - 20:34:44]]></Time>
+<NodeArgs eType="Replay" icon="5" nRep="22" >
 <Disp><![CDATA[[ txtDeliveryDate ].SetText]]></Disp>
 </NodeArgs>
 </Step>
 <Step rID="T12" >
 <Obj plainTxt="False" ><![CDATA[[ SSTabs ].Click]]></Obj>
 <Details plainTxt="False" ><![CDATA[]]></Details>
-<Time><![CDATA[14-Dec-2012 - 21:45:32]]></Time>
-<NodeArgs eType="Replay" icon="7" nRep="23" >
+<Time><![CDATA[16-Dec-2012 - 20:34:45]]></Time>
+<NodeArgs eType="Replay" icon="7" nRep="24" >
 <Disp><![CDATA[[ SSTabs ].Click]]></Disp>
 </NodeArgs>
 </Step>
 <Step rID="T13" >
 <Obj plainTxt="False" ><![CDATA[[ Edit ].Type]]></Obj>
 <Details plainTxt="False" ><![CDATA["01SMECLACLO003"]]></Details>
-<Time><![CDATA[14-Dec-2012 - 21:45:40]]></Time>
-<NodeArgs eType="Replay" icon="9" nRep="25" >
+<Time><![CDATA[16-Dec-2012 - 20:34:47]]></Time>
+<NodeArgs eType="Replay" icon="8" nRep="26" >
 <Disp><![CDATA[[ Edit ].Type]]></Disp>
 </NodeArgs>
 </Step>
 <Step rID="T14" >
 <Obj plainTxt="False" ><![CDATA[[ Edit ].Type]]></Obj>
 <Details plainTxt="False" ><![CDATA["12"]]></Details>
-<Time><![CDATA[14-Dec-2012 - 21:45:41]]></Time>
-<NodeArgs eType="Replay" icon="9" nRep="27" >
+<Time><![CDATA[16-Dec-2012 - 20:34:48]]></Time>
+<NodeArgs eType="Replay" icon="8" nRep="28" >
 <Disp><![CDATA[[ Edit ].Type]]></Disp>
 </NodeArgs>
 </Step>
 <Step rID="T15" >
 <Obj plainTxt="False" ><![CDATA[[ Edit ].Type]]></Obj>
 <Details plainTxt="False" ><![CDATA["120.898989"]]></Details>
-<Time><![CDATA[14-Dec-2012 - 21:45:42]]></Time>
-<NodeArgs eType="Replay" icon="9" nRep="29" >
+<Time><![CDATA[16-Dec-2012 - 20:34:48]]></Time>
+<NodeArgs eType="Replay" icon="8" nRep="30" >
 <Disp><![CDATA[[ Edit ].Type]]></Disp>
 </NodeArgs>
 </Step>
 <Step rID="T16" >
-<Obj plainTxt="False" ><![CDATA[[ WinEditor ].Type]]></Obj>
-<Details plainTxt="False" ><![CDATA["01SMECOMCLA014"]]></Details>
-<Time><![CDATA[14-Dec-2012 - 21:46:13]]></Time>
-<NodeArgs eType="Replay" icon="9" nRep="35" status="Warning" >
-<Disp><![CDATA[[ WinEditor ].Type]]></Disp>
+<Obj plainTxt="False" ><![CDATA[[ Edit ].Type]]></Obj>
+<Details plainTxt="False" ><![CDATA["DISCOUNT@12%"]]></Details>
+<Time><![CDATA[16-Dec-2012 - 20:34:49]]></Time>
+<NodeArgs eType="Replay" icon="8" nRep="32" >
+<Disp><![CDATA[[ Edit ].Type]]></Disp>
 </NodeArgs>
 </Step>
 <Step rID="T17" >
-<Obj plainTxt="False" ><![CDATA[[ WinEditor ]]]></Obj>
-<Details plainTxt="False" ><![CDATA[Cannot find the "[ WinEditor ]" object's parent "[ VbWindow ]" (class VbWindow). Verify that parent properties match an object currently displayed in your application.]]></Details>
-<Time><![CDATA[14-Dec-2012 - 21:46:13]]></Time>
-<Step rID="T18" >
-<Obj plainTxt="False" ><![CDATA[]]></Obj>
-<Details plainTxt="False" ><![CDATA[Object's physical description:<br>Text = Sales Order<br>class name = VbWindow<br>]]></Details>
-<Time><![CDATA[14-Dec-2012 - 21:46:13]]></Time>
-<NodeArgs eType="Replay" icon="8" nRep="37" status="Warning" nType="Parent description" >
-<Disp><![CDATA[]]></Disp>
+<Obj plainTxt="False" ><![CDATA[[ Edit ].Type]]></Obj>
+<Details plainTxt="False" ><![CDATA["01SMECOMCLA014"]]></Details>
+<Time><![CDATA[16-Dec-2012 - 20:34:50]]></Time>
+<NodeArgs eType="Replay" icon="8" nRep="34" >
+<Disp><![CDATA[[ Edit ].Type]]></Disp>
 </NodeArgs>
 </Step>
-<NodeArgs eType="Replay" icon="9" nRep="36" status="Failed" nType="Run Error" >
-<Disp><![CDATA[[ WinEditor ]]]></Disp>
+<Step rID="T18" >
+<Obj plainTxt="False" ><![CDATA[[ Edit ].Type]]></Obj>
+<Details plainTxt="False" ><![CDATA["12"]]></Details>
+<Time><![CDATA[16-Dec-2012 - 20:34:50]]></Time>
+<NodeArgs eType="Replay" icon="8" nRep="36" >
+<Disp><![CDATA[[ Edit ].Type]]></Disp>
 </NodeArgs>
 </Step>
 <Step rID="T19" >
-<Obj plainTxt="False" ><![CDATA[Stop Run]]></Obj>
-<Details plainTxt="False" ><![CDATA[Run stopped by user.]]></Details>
-<Time><![CDATA[14-Dec-2012 - 21:46:13]]></Time>
-<NodeArgs eType="General" icon="10" nRep="40" >
-<Disp><![CDATA[Stop Run]]></Disp>
+<Obj plainTxt="False" ><![CDATA[[ Edit ].Type]]></Obj>
+<Details plainTxt="False" ><![CDATA["129.987654"]]></Details>
+<Time><![CDATA[16-Dec-2012 - 20:34:51]]></Time>
+<NodeArgs eType="Replay" icon="8" nRep="38" >
+<Disp><![CDATA[[ Edit ].Type]]></Disp>
 </NodeArgs>
 </Step>
-<Summary sTime="14-Dec-2012 - 21:45:23" eTime="14-Dec-2012 - 21:46:13" passed="0" failed="2" warnings="2" ></Summary>
+<Step rID="T20" >
+<Obj plainTxt="False" ><![CDATA[[ Edit ].Type]]></Obj>
+<Details plainTxt="False" ><![CDATA["DISCOUNT@12%"]]></Details>
+<Time><![CDATA[16-Dec-2012 - 20:34:52]]></Time>
+<NodeArgs eType="Replay" icon="8" nRep="40" >
+<Disp><![CDATA[[ Edit ].Type]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T21" >
+<Obj plainTxt="False" ><![CDATA[[ Edit ].Type]]></Obj>
+<Details plainTxt="False" ><![CDATA["01SOUCSXCLA201"]]></Details>
+<Time><![CDATA[16-Dec-2012 - 20:34:52]]></Time>
+<NodeArgs eType="Replay" icon="8" nRep="42" >
+<Disp><![CDATA[[ Edit ].Type]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T22" >
+<Obj plainTxt="False" ><![CDATA[[ Edit ].Type]]></Obj>
+<Details plainTxt="False" ><![CDATA["1"]]></Details>
+<Time><![CDATA[16-Dec-2012 - 20:34:53]]></Time>
+<NodeArgs eType="Replay" icon="8" nRep="44" >
+<Disp><![CDATA[[ Edit ].Type]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T23" >
+<Obj plainTxt="False" ><![CDATA[[ Edit ].Type]]></Obj>
+<Details plainTxt="False" ><![CDATA["234.567899"]]></Details>
+<Time><![CDATA[16-Dec-2012 - 20:34:54]]></Time>
+<NodeArgs eType="Replay" icon="8" nRep="46" >
+<Disp><![CDATA[[ Edit ].Type]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T24" >
+<Obj plainTxt="False" ><![CDATA[[ Edit ].Type]]></Obj>
+<Details plainTxt="False" ><![CDATA["DISCOUNT@12%"]]></Details>
+<Time><![CDATA[16-Dec-2012 - 20:34:54]]></Time>
+<NodeArgs eType="Replay" icon="8" nRep="48" >
+<Disp><![CDATA[[ Edit ].Type]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T25" >
+<Obj plainTxt="False" ><![CDATA[[ Edit ].Type]]></Obj>
+<Details plainTxt="False" ><![CDATA["01SOUCSXCLA252"]]></Details>
+<Time><![CDATA[16-Dec-2012 - 20:34:55]]></Time>
+<NodeArgs eType="Replay" icon="8" nRep="50" >
+<Disp><![CDATA[[ Edit ].Type]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T26" >
+<Obj plainTxt="False" ><![CDATA[[ Edit ].Type]]></Obj>
+<Details plainTxt="False" ><![CDATA["2"]]></Details>
+<Time><![CDATA[16-Dec-2012 - 20:34:56]]></Time>
+<NodeArgs eType="Replay" icon="8" nRep="52" >
+<Disp><![CDATA[[ Edit ].Type]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T27" >
+<Obj plainTxt="False" ><![CDATA[[ Edit ].Type]]></Obj>
+<Details plainTxt="False" ><![CDATA["126.999999"]]></Details>
+<Time><![CDATA[16-Dec-2012 - 20:34:56]]></Time>
+<NodeArgs eType="Replay" icon="8" nRep="54" >
+<Disp><![CDATA[[ Edit ].Type]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T28" >
+<Obj plainTxt="False" ><![CDATA[[ Edit ].Type]]></Obj>
+<Details plainTxt="False" ><![CDATA["DISCOUNT@12%"]]></Details>
+<Time><![CDATA[16-Dec-2012 - 20:34:57]]></Time>
+<NodeArgs eType="Replay" icon="8" nRep="56" >
+<Disp><![CDATA[[ Edit ].Type]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T29" >
+<Obj plainTxt="False" ><![CDATA[[ Edit ].Type]]></Obj>
+<Details plainTxt="False" ><![CDATA["01SOUCSXCLA253"]]></Details>
+<Time><![CDATA[16-Dec-2012 - 20:34:58]]></Time>
+<NodeArgs eType="Replay" icon="8" nRep="58" >
+<Disp><![CDATA[[ Edit ].Type]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T30" >
+<Obj plainTxt="False" ><![CDATA[[ Edit ].Type]]></Obj>
+<Details plainTxt="False" ><![CDATA["3"]]></Details>
+<Time><![CDATA[16-Dec-2012 - 20:34:58]]></Time>
+<NodeArgs eType="Replay" icon="8" nRep="60" >
+<Disp><![CDATA[[ Edit ].Type]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T31" >
+<Obj plainTxt="False" ><![CDATA[[ Edit ].Type]]></Obj>
+<Details plainTxt="False" ><![CDATA["43.455455"]]></Details>
+<Time><![CDATA[16-Dec-2012 - 20:34:59]]></Time>
+<NodeArgs eType="Replay" icon="8" nRep="62" >
+<Disp><![CDATA[[ Edit ].Type]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T32" >
+<Obj plainTxt="False" ><![CDATA[[ Edit ].Type]]></Obj>
+<Details plainTxt="False" ><![CDATA["DISCOUNT@12%"]]></Details>
+<Time><![CDATA[16-Dec-2012 - 20:34:59]]></Time>
+<NodeArgs eType="Replay" icon="8" nRep="64" >
+<Disp><![CDATA[[ Edit ].Type]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T33" >
+<Obj plainTxt="False" ><![CDATA[[ Edit ].Type]]></Obj>
+<Details plainTxt="False" ><![CDATA["01SOUCSXCLO204"]]></Details>
+<Time><![CDATA[16-Dec-2012 - 20:35:00]]></Time>
+<NodeArgs eType="Replay" icon="8" nRep="66" >
+<Disp><![CDATA[[ Edit ].Type]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T34" >
+<Obj plainTxt="False" ><![CDATA[[ Edit ].Type]]></Obj>
+<Details plainTxt="False" ><![CDATA["4"]]></Details>
+<Time><![CDATA[16-Dec-2012 - 20:35:01]]></Time>
+<NodeArgs eType="Replay" icon="8" nRep="68" >
+<Disp><![CDATA[[ Edit ].Type]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T35" >
+<Obj plainTxt="False" ><![CDATA[[ Edit ].Type]]></Obj>
+<Details plainTxt="False" ><![CDATA["34.678989"]]></Details>
+<Time><![CDATA[16-Dec-2012 - 20:35:01]]></Time>
+<NodeArgs eType="Replay" icon="8" nRep="70" >
+<Disp><![CDATA[[ Edit ].Type]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T36" >
+<Obj plainTxt="False" ><![CDATA[[ Edit ].Type]]></Obj>
+<Details plainTxt="False" ><![CDATA["DISCOUNT@12%"]]></Details>
+<Time><![CDATA[16-Dec-2012 - 20:35:02]]></Time>
+<NodeArgs eType="Replay" icon="8" nRep="72" >
+<Disp><![CDATA[[ Edit ].Type]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T37" >
+<Obj plainTxt="False" ><![CDATA[[ txtFreight ].SetText]]></Obj>
+<Details plainTxt="False" ><![CDATA["12.89"]]></Details>
+<Time><![CDATA[16-Dec-2012 - 20:35:02]]></Time>
+<NodeArgs eType="Replay" icon="5" nRep="74" >
+<Disp><![CDATA[[ txtFreight ].SetText]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T38" >
+<Obj plainTxt="False" ><![CDATA[[ txtInsurance ].SetText]]></Obj>
+<Details plainTxt="False" ><![CDATA["12.23"]]></Details>
+<Time><![CDATA[16-Dec-2012 - 20:35:02]]></Time>
+<NodeArgs eType="Replay" icon="5" nRep="76" >
+<Disp><![CDATA[[ txtInsurance ].SetText]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T39" >
+<Obj plainTxt="False" ><![CDATA[[ Edit ].Type]]></Obj>
+<Details plainTxt="False" ><![CDATA["DISCONT@13%"]]></Details>
+<Time><![CDATA[16-Dec-2012 - 20:35:03]]></Time>
+<NodeArgs eType="Replay" icon="8" nRep="78" >
+<Disp><![CDATA[[ Edit ].Type]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T40" >
+<Obj plainTxt="False" ><![CDATA[[ frmSalesOrder ].Activate]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[16-Dec-2012 - 20:35:03]]></Time>
+<NodeArgs eType="Replay" icon="9" nRep="80" >
+<Disp><![CDATA[[ frmSalesOrder ].Activate]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T41" >
+<Obj plainTxt="False" ><![CDATA[[ SSTabs ].Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[16-Dec-2012 - 20:35:04]]></Time>
+<NodeArgs eType="Replay" icon="7" nRep="82" >
+<Disp><![CDATA[[ SSTabs ].Click]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T42" >
+<Obj plainTxt="False" ><![CDATA[[ SSListBar ].Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[16-Dec-2012 - 20:35:05]]></Time>
+<NodeArgs eType="Replay" icon="7" nRep="84" >
+<Disp><![CDATA[[ SSListBar ].Click]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T43" >
+<Obj plainTxt="False" ><![CDATA[[ Edit ].Type]]></Obj>
+<Details plainTxt="False" ><![CDATA["NISHA KUMARI"]]></Details>
+<Time><![CDATA[16-Dec-2012 - 20:35:05]]></Time>
+<NodeArgs eType="Replay" icon="8" nRep="86" >
+<Disp><![CDATA[[ Edit ].Type]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T44" >
+<Obj plainTxt="False" ><![CDATA[Run Error]]></Obj>
+<Details plainTxt="False" ><![CDATA[The DataTable.ImportSheet operation failed. The specified sheet does not exist.<BR>Function file: C:\QTP\Script\PickListwithReferenceSO.vbs<BR>Line (40): &quot;	DataTable.ImportSheet &quot;C:\QTP\Results\Results.xls&quot;,&quot;DocNumber&quot;,&quot;soResults&quot;&quot;.]]></Details>
+<Time><![CDATA[16-Dec-2012 - 20:35:05]]></Time>
+<NodeArgs eType="Replay" icon="10" nRep="87" status="Failed" >
+<Disp><![CDATA[Run Error]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T45" >
+<Obj plainTxt="False" ><![CDATA[[ Edit ].Type]]></Obj>
+<Details plainTxt="False" ><![CDATA["1001200000081"]]></Details>
+<Time><![CDATA[16-Dec-2012 - 20:35:05]]></Time>
+<NodeArgs eType="Replay" icon="8" nRep="89" >
+<Disp><![CDATA[[ Edit ].Type]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T46" >
+<Obj plainTxt="False" ><![CDATA[[ frmPickList ].Activate]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[16-Dec-2012 - 20:35:06]]></Time>
+<NodeArgs eType="Replay" icon="9" nRep="91" >
+<Disp><![CDATA[[ frmPickList ].Activate]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T47" >
+<Obj plainTxt="False" ><![CDATA[[ SSListBar ].Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[16-Dec-2012 - 20:35:08]]></Time>
+<NodeArgs eType="Replay" icon="7" nRep="93" >
+<Disp><![CDATA[[ SSListBar ].Click]]></Disp>
+</NodeArgs>
+</Step>
+<Summary sTime="16-Dec-2012 - 20:34:34" eTime="16-Dec-2012 - 20:35:08" passed="0" failed="1" warnings="0" ></Summary>
 <NodeArgs eType="StartAction" icon="4" nRep="8" status="Failed" >
 <Disp><![CDATA[Action1 Summary]]></Disp>
 </NodeArgs>
@@ -233,15 +457,7 @@
 <Disp><![CDATA[DriverFile Iteration 1 (Row 1)]]></Disp>
 </NodeArgs>
 </DIter>
-<Step rID="T20" >
-<Obj plainTxt="False" ><![CDATA[Stop Run]]></Obj>
-<Details plainTxt="False" ><![CDATA[Run stopped by user.]]></Details>
-<Time><![CDATA[14-Dec-2012 - 21:46:13]]></Time>
-<NodeArgs eType="General" icon="11" nRep="43" >
-<Disp><![CDATA[Stop Run]]></Disp>
-</NodeArgs>
-</Step>
-<Summary sTime="14-Dec-2012 - 21:45:22" eTime="14-Dec-2012 - 21:46:13" passed="0" failed="2" warnings="2" stopped="True" ></Summary>
+<Summary sTime="16-Dec-2012 - 20:34:33" eTime="16-Dec-2012 - 20:35:08" passed="0" failed="1" warnings="0" ></Summary>
 <NodeArgs eType="StartTest" icon="1" nRep="4" status="Failed" >
 <Disp><![CDATA[Test DriverFile Summary]]></Disp>
 </NodeArgs>
